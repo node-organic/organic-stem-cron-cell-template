@@ -1,0 +1,10 @@
+{
+  "groups": {{{cell-groups}}},
+  "build": {
+    "{{{cell-name}}}Job": {
+      "source": "./organelles/{{{cell-name}}}",
+      "startOnInitialization": true,
+      "intervalMiliseconds": {{{intervalMiliseconds}}}
+    }
+  }
+}

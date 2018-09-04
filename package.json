@@ -1,0 +1,46 @@
+{
+  "name": "organic-stem-cron-cell-template",
+  "description": "scaffold a cron-like cell",
+  "version": "1.0.0",
+  "bin": {
+    "organic-stem-cron-cell-template": "./index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "organic-stack-upgrade": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "execa": "^1.0.0",
+    "jest": "^23.5.0",
+    "organic-plasma": "^2.1.0",
+    "terminate": "^2.1.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/seed/"
+    ]
+  },
+  "stackUpgrades": {
+    "organic-stack-template": "1.0.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-organic/organic-stem-cron-cell-template.git"
+  },
+  "author": "Boris Filipov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-organic/organic-stem-cron-cell-template/issues"
+  },
+  "homepage": "https://github.com/node-organic/organic-stem-cron-cell-template#readme"
+}
