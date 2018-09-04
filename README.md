@@ -7,5 +7,5 @@ scaffold a cron-like cell
 ```
 $ mkdir ./myProject
 $ cd ./myProject
-$ npx organic-stem-cron-cell-template
+$ npx node-organic/organic-stem-cron-cell-template
 ```
