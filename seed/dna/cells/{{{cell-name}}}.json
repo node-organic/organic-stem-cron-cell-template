@@ -4,7 +4,8 @@
     "{{{cell-name}}}Job": {
       "source": "./organelles/{{{cell-name}}}",
       "startOnInitialization": true,
-      "intervalMiliseconds": {{{intervalMiliseconds}}}
+      "intervalMiliseconds": {{{intervalMiliseconds}}},
+      "log": true
     }
   }
 }
