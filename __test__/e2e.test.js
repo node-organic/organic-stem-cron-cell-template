@@ -2,11 +2,23 @@ const path = require('path')
 const os = require('os')
 const execa = require('execa')
 const terminate = require('terminate')
+const generateCore = require('organic-stem-core-template')
+
 let tempDir = path.join(os.tmpdir(), 'test-stack-upgrade-' + Math.random())
 
 const timeout = function (ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+beforeAll(async () => {
+  jest.setTimeout(60 * 1000)
+  await generateCore({
+    destDir: tempDir,
+    answers: {
+      'project-name': 'test'
+    }
+  })
+})
 
 test('stack upgrade', async () => {
   jest.setTimeout(60 * 1000)
@@ -16,15 +28,16 @@ test('stack upgrade', async () => {
     answers: {
       'cell-name': 'testcell',
       'intervalMiliseconds': 1000,
-      'cell-groups': 'test'
+      'cell-groups': ['test'],
+      'cwd': 'crons/testcell'
     }
   })
 })
 
 test('the cell works', async () => {
   let cmds = [
-    'cd ' + tempDir + '/cells/testcell',
-    'node ./index'
+    'cd ' + tempDir + '/cells/crons/testcell',
+    'npm run develo'
   ]
   let child = execa.shell(cmds.join(' && '))
   let buffer = ''
@@ -41,7 +54,7 @@ test('the cell works', async () => {
 
 test('the cell\'s test works', async () => {
   let cmds = [
-    'cd ' + tempDir + '/cells/testcell',
+    'cd ' + tempDir + '/cells/crons/testcell',
     'npm run test'
   ]
   let {stdout} = await execa.shell(cmds.join(' && '))
