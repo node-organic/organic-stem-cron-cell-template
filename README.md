@@ -2,10 +2,13 @@
 
 scaffold a cron-like cell
 
+## Depends on
+
+* [organic-stem-core-template](https://github.com/node-organic/organic-stem-core-template)
+
 ## usage
 
-```
-$ mkdir ./myProject
+```bash
 $ cd ./myProject
 $ npx node-organic/organic-stem-cron-cell-template
 ```
