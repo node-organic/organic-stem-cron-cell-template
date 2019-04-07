@@ -6,12 +6,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "organic-stem-cell": "^2.0.0",
+    "organic-stem-cell": "^3.0.1",
     "organic-worker-interval": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5",
-    "jest": "^23.5.0",
+    "nodemon": "^1.18.7",
+    "jest": "^24.5.0",
     "organic-plasma": "^2.1.0"
   },
   "nodemonConfig": {
