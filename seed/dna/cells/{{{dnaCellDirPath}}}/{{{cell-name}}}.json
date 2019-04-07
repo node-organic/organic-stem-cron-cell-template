@@ -1,6 +1,7 @@
 {
-  "groups": {{{cell-groups}}},
   "cwd": "cells/{{{cwd}}}",
+  "cellInfo": "v1",
+  "cellKind": "cronCell",
   "build": {
     "{{{cell-name}}}Job": {
       "source": "./organelles/{{{cell-name}}}",
